@@ -45,9 +45,9 @@ public class ConditionSerializer implements Serializer<ConditionStructure> {
     }
 
     private static JSONObject serialize_condition(ConditionData condition) throws JSONException {
-		JSONObject json_situation = new JSONObject();
-		json_situation.put(C.SPEC, LocalSkillRegistry.getInstance().condition().findSkill(condition).id());
-		json_situation.put(C.DATA, condition.serialize(PluginDataFormat.JSON));
-		return json_situation;
-	}
+        JSONObject json_situation = new JSONObject();
+        json_situation.put(C.SPEC, LocalSkillRegistry.getInstance().condition().findSkill(condition).id());
+        json_situation.put(C.DATA, condition.serialize(PluginDataFormat.JSON));
+        return json_situation;
+    }
 }
